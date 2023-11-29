@@ -31,6 +31,10 @@ app.listen(PORT, () => {
     });
 });
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the root path!');
+});
+
 app.post("/login", async (req, res) => {
     try {
         const { email, password } = req.body;
