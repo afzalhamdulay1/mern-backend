@@ -3,6 +3,7 @@ let mongoose = require('mongoose');
 const cors = require('cors');
 let productRouter  = require('./routers/productRouter')
 require('dotenv').config();
+const PORT =    process.env.PORT || 9000;
 
 let app = express();
 
@@ -19,7 +20,7 @@ const userSchema = new mongoose.Schema({
 
 const User = new mongoose.model("User", userSchema);
 
-app.listen(9000, () => {
+app.listen(PORT, () => {
     mongoose.connect(process.env.MONGO_URL)
     .then(() => {
         console.log("Database connection established");
