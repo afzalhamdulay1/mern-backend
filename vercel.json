@@ -11,13 +11,6 @@
        "src": "/(.*)",
        "dest": "index.js"
      }
-   ],
-   "functions": {
-     "api/product/fetch": {
-       "handler": "index.js",
-       "methods": ["GET"],
-       "options": { "timeout": 30 }
-     }
-   }
+   ]
  }
  
